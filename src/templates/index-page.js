@@ -10,9 +10,7 @@ import Features from '../components/Features'
 
 export const IndexPageTemplate = ({
   image,
-  title,
   heading,
-  subheading,
   mainpitch,
   description,
   intro,
@@ -24,7 +22,7 @@ export const IndexPageTemplate = ({
           <Img fluid={image} className=""/>
         </div>
         <div className="column is-5 has-text-centered">
-          <div className="is-size-5 mb-4" style={{ padding: 10}}>Hire us for your next event!!</div>
+          <div className="is-size-4 mb-2 has-text-weight-semibold p-0">Upcoming event!?</div>
           <a 
             className="button is-size-4" 
             href="/contact"

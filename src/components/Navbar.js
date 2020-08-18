@@ -67,7 +67,7 @@ const Navbar = class extends React.Component {
             </div>
             {/* Hamburger menu */}
             <div
-              className={`navbar-burger burger mt-1`}
+              className={`navbar-burger burger mt-1 ${this.state.navBarActiveClass}`}
               style={{paddingBottom: 'auto', paddingTop: 'auto', height: '4em', width: '4em', color: 'black'}}
               data-target="navMenu"
               onClick={() => this.toggleHamburger()}
