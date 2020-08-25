@@ -36,16 +36,16 @@ const Navbar = class extends React.Component {
     return (
       <nav
         className="navbar is-transparent"
-        style={{backgroundColor: ''}}
+        style={{backgroundColor: 'rgba(134, 204, 204, 1)', boxShadow: '0px 2px 13px 0px rgba(47, 79, 79, .7'}}
         role="navigation"
         aria-label="main-navigation"
       >
         <div className="container">
-          <div className="columns navbar-brand" style={{margin: 0}}>
-            <div className="column pt-3">
+          <div className="columns navbar-brand is-vcentered" style={{margin: 0}}>
+            <div className="column pt-4">
               <a
                 className=""
-                style={{padding: 5}}
+                style={{padding: 5,}}
                 href="https://www.instagram.com/backwoods_biochar_llc/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -72,27 +72,27 @@ const Navbar = class extends React.Component {
               data-target="navMenu"
               onClick={() => this.toggleHamburger()}
             >
-              <span style={{height: 3, left: 'calc(50% - 12px', top: 'calc(50% - 12px', width: 24}} />
-              <span style={{height: 3, left: 'calc(50% - 12px', top: 'calc(50% - 2px', width: 24}} />
-              <span style={{height: 3, left: 'calc(50% - 12px', top: 'calc(50% + 8px', width: 24}} />
+              <span />
+              <span />
+              <span />
             </div>
           </div>
           <div
             id="navMenu"
             className={`navbar-menu ${this.state.navBarActiveClass}`}
-            style={{backgroundColor: '', color: 'white'}}
+            style={{backgroundColor: 'rgba(134, 204, 204, 1)'}}
           >
-            <div className="navbar has-text-centered " style={{backgroundColor: '', color: 'white', marginLeft: 'auto'}}>
-              <Link className="navbar-item" to="/about">
+            <div className="navbar is-size-4 has-text-centered " style={{backgroundColor: 'rgba(134, 204, 204, 1)', marginLeft: 'auto'}}>
+              <Link className="navbar-item has-text-black"  to="/about">
                 About
               </Link>
-              <Link className="navbar-item" to="/products">
+              <Link className="navbar-item has-text-black" to="/products">
                 Products
               </Link>
-              <Link className="navbar-item" to="/blog">
+              <Link className="navbar-item has-text-black" to="/blog">
                 Blog
               </Link>
-              <Link className="navbar-item" to="/contact">
+              <Link className="navbar-item has-text-black" to="/contact">
                 Contact
               </Link>
             </div>

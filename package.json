@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-netlify-cms",
-  "description": "Example Gatsby, and Netlify CMS project",
+  "name": "coffee-bound",
+  "description": "Your ultimate coffee experience",
   "version": "1.1.3",
-  "author": "Austin Green",
+  "author": "Justin Blocker",
   "dependencies": {
     "bulma": "^0.9.0",
     "gatsby": "^2.20.35",

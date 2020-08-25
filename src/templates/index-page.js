@@ -4,6 +4,7 @@ import { Link, graphql } from 'gatsby'
 import Img from "gatsby-image"
 
 import 'bulma/css/bulma.css'
+import '../components/all.sass'
 
 import Layout from '../components/Layout'
 import Features from '../components/Features'
@@ -17,20 +18,12 @@ export const IndexPageTemplate = ({
 }) => (
   <div>
     <div className="container is-widescreen">
-      <div className="columns is-vcentered" style={{margin: 0, color: 'black'}}>
-        <div className="column">
+      <div className="columns is-centered" style={{margin: 0, color: 'black'}}>
+        <div className="column is-hidden-tablet" style={{height: 125}} />
+        <div className="column is-7 pt-5">
           <Img fluid={image} className=""/>
         </div>
-        <div className="column is-5 has-text-centered">
-          <div className="is-size-4 mb-2 has-text-weight-semibold p-0">Upcoming event!?</div>
-          <a 
-            className="button is-size-4" 
-            href="/contact"
-            style={{borderWidth: 3, borderColor: 'black'}}
-          >
-            Contact Us
-          </a>
-        </div>
+        <div className="column is-hidden-tablet" style={{height: 50}} />
       </div>
     </div>
     <section className="section section--gradient">
