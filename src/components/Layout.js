@@ -8,7 +8,7 @@ import { withPrefix } from 'gatsby'
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
   return (
-    <div>
+    <div className="container-fuild">
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
@@ -47,7 +47,7 @@ const TemplateWrapper = ({ children }) => {
           content={`${withPrefix('/')}img/og-image.jpg`}
         />
       </Helmet>
-      <Navbar />
+      <Navbar style={{zIndex: 100}}/>
       <div>{children}</div>
       <Footer />
     </div>

@@ -1,107 +1,104 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from "react"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
+import { useSiteMetadata } from "../hooks/use-site-metadata"
+import scrollTo from "gatsby-plugin-smoothscroll"
+import logo from '../img/coffeeBoundLogoDB.png'
 
-import facebook from '../img/social/facebook.svg'
-import instagram from '../img/social/instagram.svg'
-import twitter from '../img/social/twitter.svg'
-import vimeo from '../img/social/vimeo.svg'
 
-const Footer = class extends React.Component {
-  render() {
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronUp, faMapMarkerAlt, faUsers, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+
+export default () => {
+  const { social, address, contacts } = useSiteMetadata()
     return (
-      <footer className="footer has-background-black has-text-white-ter">
-        <div className="content has-text-centered has-background-black has-text-white-ter">
-          <div className="container has-background-black has-text-white-ter">
-            <div style={{ maxWidth: '100vw' }} className="columns">
-              <div className="column is-4">
-                <section className="menu">
-                  <ul className="menu-list">
-                    <li>
-                      <Link to="/" className="navbar-item">
-                        Home
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/about">
-                        About
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/products">
-                        Products
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/contact/examples">
-                        Form Examples
-                      </Link>
-                    </li>
-                    <li>
-                      <a
-                        className="navbar-item"
-                        href="/admin/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Admin
-                      </a>
-                    </li>
-                  </ul>
-                </section>
+      <div className="row justify-content-center mx-0" style={{width: '100%'}}>
+      <div className="col-12 col-md-10 text-center mt-5 pt-5 pb-1" style={{position: 'relative', backgroundColor: 'rgba(134, 204, 204, 1)'}}>
+        <div className="row">
+  
+          <div className="col-12 p-5">
+            <div className="row justify-content-center">
+  
+              <div className="col-6 col-md-2 p-2">
+                <FontAwesomeIcon style={{color: 'rgb(30, 30, 30)', fontSize: 30}} icon={ faUsers } />
+                <h3 className="">Social</h3>
+                <div>
+                  { social.map(mySocial =>
+                    <div><a style={{color: 'white'}} href={ mySocial.url }>
+                      { mySocial.service }
+                    </a></div>
+                  )}
+                </div>
               </div>
-              <div className="column is-4">
-                <section>
-                  <ul className="menu-list">
-                    <li>
-                      <Link className="navbar-item" to="/blog">
-                        Latest Stories
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/contact">
-                        Contact
-                      </Link>
-                    </li>
-                  </ul>
-                </section>
+  
+              <div className="col-6 col-md-2 p-2">
+                <FontAwesomeIcon style={{color: 'rgb(30, 30, 30)', fontSize: 30}} icon={ faEnvelope } />
+                 <h3 className="">Contact</h3>
+                 <div>
+                   { contacts.map((contact, index) =>
+                     <div><a style={{color: 'white'}} href={ contact.url }>{ contact.text }</a></div>
+                   )}
+                   <div><a style={{color: 'white'}} href="/contact">On Site</a></div>
+                 </div>
               </div>
-              <div className="column is-4 social">
-                <a title="facebook" href="https://facebook.com">
-                  <img
-                    src={facebook}
-                    alt="Facebook"
-                    style={{ width: '1em', height: '1em' }}
-                  />
+              
+              <div className="col-6 col-md-2 p-2">
+                <FontAwesomeIcon style={{color: 'rgb(30, 30, 30)', fontSize: 30}} icon={ faMapMarkerAlt } />
+                <h3 className="">Visit</h3>
+                <a style={{color: 'white'}} href="https://www.google.com/maps/place/Coffee+Bound/@29.4624753,-98.4353207,19z/data=!3m1!4b1!4m5!3m4!1s0x865cf55fc2cc694b:0x32312af37c2bb85b!8m2!3d29.4624753!4d-98.4347735" className="has-text-grey-dark">
+                  { address.line1 }<br />
+                  { address.line2 }<br />
+                  { address.line3 }<br />
+                  { address.line4 }
                 </a>
-                <a title="twitter" href="https://twitter.com">
-                  <img
-                    className="fas fa-lg"
-                    src={twitter}
-                    alt="Twitter"
-                    style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
-                <a title="instagram" href="https://instagram.com">
-                  <img
-                    src={instagram}
-                    alt="Instagram"
-                    style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
-                <a title="vimeo" href="https://vimeo.com">
-                  <img
-                    src={vimeo}
-                    alt="Vimeo"
-                    style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
+              </div>
+
+              <div className="col-6 col-md-2 p-2">
+                <div className="row">
+                  <div className="col">
+                    <AnchorLink className=""  to="/">
+                      <img class="mw-100" style={{border: '1px solid black', borderRadius: 20,}} src={ logo } alt="logo" />
+                    </AnchorLink>
+                  </div>
+                </div>  
               </div>
             </div>
           </div>
         </div>
-      </footer>
+  
+        <p className="copyright px-3">&copy; 2020 Coffee Bound | Design by <a style={{color: 'white'}} title="justInCodeWD" href="https://www.instagram.com/justincodewd/?hl=en">justInCodeWD</a> </p>
+  
+        <div 
+            style={{
+              position: 'absolute',
+              top: -24,
+              left: '50%',
+              marginLeft: -40,
+              textAlign: 'center',
+            }} 
+            title="Back to Top" 
+            onClick={() => scrollTo('#top')}
+          >
+          <button 
+            className="button"
+            style={{
+              textDecoration: 'none',
+              border: '0 none',
+              display: 'block',
+              width: 80,
+              height: 80,
+              background: 'rgb(30, 30, 30)',
+              color: '#fff',
+              borderRadius: '100%',
+              outline: 'none !important'
+            }} 
+            title="Back to Top" 
+            onClick={() => scrollTo('#top')}
+          >
+            <FontAwesomeIcon icon={ faChevronUp } />
+          </button>
+        </div>
+      </div>
+      </div>
     )
   }
-}
 
-export default Footer

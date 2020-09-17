@@ -1,10 +1,9 @@
 ---
-templateKey: index-page
+templateKey: 'locations-page'
 title: Great coffee with a conscience
 image: /img/home-jumbotron.jpg
-image2: /img/products-grid2.jpg
-image3: /img/DeathB4Decaf.png
-heading: Great coffee with a conscience
+image2: /img/locImage.jpg
+heading: Great csoffee with a conscience
 subheading: Support sustainable farming while enjoying a cup
 mainpitch:
   title: Why Kaldi
@@ -22,55 +21,96 @@ intro:
   blurbs:
     - colClass: >
         col-12 col-md-6 order-md-1 py-md-4
-      image: /img/menuPic.jpg
-      text: >
-
-      button: > 
-        MENU
-      buttonClass: >
-        button px-3 py-2
-      hrefAtt: >
-        /menu
-    - colClass: >
-        col-12 col-md-6 order-md-2 py-md-4
       image: /img/whitePic.png
       button: > 
         
       buttonClass: >
         d-none
       text: >
-        
+        The Shop
       text2: >
-        We sell green and roasted coffee beans that are sourced directly from
-        independent farmers and farm cooperatives.
+        @THE MINI MALL
+    - colClass: >
+        col-12 col-md-6 order-md-2 py-md-4
+      image: /img/theShop.jpg
+      button: >
+        VISIT 
+      buttonClass: >
+        button px-3 py-2   
+      hrefAtt: >
+        https://www.google.com/maps/place/Coffee+Bound/@29.4624735,-98.4346993,17z/data=!4m12!1m6!3m5!1s0x865cf55fc2cc694b:0x32312af37c2bb85b!2sCoffee+Bound!8m2!3d29.4624753!4d-98.4347735!3m4!1s0x865cf55fc2cc694b:0x32312af37c2bb85b!8m2!3d29.4624753!4d-98.4347735
+      text: >
+            
     - colClass: >
         col-12 col-md-6 order-md-4 py-md-4
-      image: /img/locationsPic.jpg
-      text: >
-        
-      button: >
-        LOCATIONS
-      buttonClass: >
-        button px-3 py-2
-      hrefAtt: >
-        /locations
-    - colClass: >
-        col-12 col-md-6 order-md-3 py-md-4
       image: /img/whitePic.png
       button: > 
         
       buttonClass: >
-        d-none  
+        d-none
+      text: >
+       The Nomad
+      text2: >
+        @THE MAIN PX
+      text3: >
+        Sat + Sun
+    - colClass: >
+        col-12 col-md-6 order-md-3 py-md-4
+      image: /img/theNomad.jpg
+      button: >
+        VISIT
+      buttonClass: >
+        button px-3 py-2
+      hrefAtt: >
+        https://www.google.com/maps/place/Coffee+Bound/@29.4507664,-98.4503431,17z/data=!3m1!4b1!4m5!3m4!1s0x865cf5f765ed9511:0x9201746d9818aa53!8m2!3d29.4507664!4d-98.4481544
+      text: >
+         
+    - colClass: >
+        col-12 col-md-6 order-md-5 py-md-4
+      image: /img/whitePic.png
+      button: > 
+        
+      buttonClass: >
+        d-none
+      text: >
+       The Nomad
+      text2: >
+        @THE AAFES SHOPETTE
+      text3: >
+        M - F
+    - colClass: >
+        col-12 col-md-6 order-md-6 py-md-4
+      image: /img/theNomad.jpg
+      button: >
+        VISIT
+      buttonClass: >
+        button px-3 py-2
+      hrefAtt: >
+        https://www.google.com/maps/place/Coffee+Bound/@29.4574797,-98.4453281,15.51z/data=!4m5!3m4!1s0x865c8d201deb40d9:0x18f542970cf92177!8m2!3d29.4599941!4d-98.4437638
       text: >
         
+    - colClass: >
+        col-12 col-md-6 order-md-8 py-md-4
+      image: /img/whitePic.png
+      button: > 
+        
+      buttonClass: >
+        d-none
+      text: >
+       The Peddler
       text2: >
-        We believe that good coffee has the power to bring people together.
-  heading: What we offer
-  description: >
-    Kaldi is the ultimate spot for coffee lovers who want to learn about their
-    java’s origin and support the farmers that grew it. We take coffee
-    production, roasting and brewing seriously and we’re glad to pass that
-    knowledge to anyone. This is an edit via identity...
+        ON CALL
+    - colClass: >
+        col-12 col-md-6 order-md-7 py-md-4
+      image: /img/thePeddler.jpg
+      text: >
+        
+      button: >
+        Contact
+      buttonClass: >
+        button px-3 py-2
+      hrefAtt: >
+        /contact
 main:
   heading: Great coffee with no compromises
   description: >

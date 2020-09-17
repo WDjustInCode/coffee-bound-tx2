@@ -38,12 +38,12 @@ export default class Index extends React.Component {
       <Layout>
           <div className="container">
             <div className="row" style={{marginTop: 100}}>
-              <h1 className="col-12">Contact</h1>
+              <h1 className="col-12">Careers</h1>
               <form
                 className="col-12"
-                name="contact"
+                name="career"
                 method="post"
-                action="/contact/thanks/"
+                action="/career/thanks/"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
                 onSubmit={this.handleSubmit}

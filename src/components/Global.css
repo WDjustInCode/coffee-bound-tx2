@@ -1,0 +1,37 @@
+.dropdown-menu {
+    background-color: rgb(30, 30, 30) !important;
+}
+
+.dropdown-item {
+    color: white !important;
+}
+
+button:focus {
+    outline: none !important;
+}
+
+.btn-secondary {
+    background-color: #343A40 !important;
+}
+
+.modalP {
+    margin-bottom: 0;
+    text-transform: uppercase !important;
+    color: #6c757d !important;
+}
+
+.modalPheader {
+    margin-bottom: 0;
+    text-align: center !important;
+    font-size: 20px;
+}
+
+.navMenu {
+    color: white !important;
+}
+
+
+.locationImage {
+  justify-content: center;
+  align-items: center;
+}
